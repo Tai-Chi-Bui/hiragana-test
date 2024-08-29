@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Hiragana Knowledge Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="quiz-setup">
+        <h1>Hiragana Knowledge Test</h1>
+        <div class="settings">
+          <label for="hiraganaGroups">Choose Hiragana Groups:</label>
+          <select id="hiraganaGroups" multiple>
+            <option value="a-group">A Group</option>
+            <option value="k-group">K Group</option>
+            <option value="s-group">S Group</option>
+            <option value="t-group">T Group</option>
+            <option value="n-group">N Group</option>
+            <option value="h-group">H Group</option>
+            <option value="m-group">M Group</option>
+            <option value="y-group">Y Group</option>
+            <option value="r-group">R Group</option>
+            <option value="w-group">W Group</option>
+            <option value="n-character">N Character</option>
+            <option value="g-group">G Group</option>
+            <option value="z-group">Z Group</option>
+            <option value="d-group">D Group</option>
+            <option value="b-group">B Group</option>
+            <option value="p-group">P Group</option>
+            <option value="ky-group">KY Group</option>
+            <option value="sh-group">SH Group</option>
+            <option value="ch-group">CH Group</option>
+            <option value="ny-group">NY Group</option>
+            <option value="hy-group">HY Group</option>
+            <option value="my-group">MY Group</option>
+            <option value="ry-group">RY Group</option>
+            <option value="obsolete-group">Obsolete Group</option>
+          </select>
+          <button id="startQuiz">Start Quiz</button>
+        </div>
+      </div>
+
+      <div id="quizContainer" class="hidden">
+        <div class="quiz">
+          <div id="questionContainer"></div>
+          <button id="nextQuestion" class="hidden">Next Question</button>
+        </div>
+        <div class="progress">
+          <h3>Progress</h3>
+          <table id="progressTable">
+            <thead>
+              <tr>
+                <th>Question #</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="progressTableBody">
+              <!-- Dynamic rows will be inserted here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div id="resultContainer" class="hidden">
+        <h2>Your Score: <span id="score"></span></h2>
+        <p id="grade"></p>
+        <button id="restartQuiz">Restart Quiz</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
